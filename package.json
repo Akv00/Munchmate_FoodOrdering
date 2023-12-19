@@ -1,0 +1,22 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "reacting",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akv00/react_project.git"
+  },
+  "author": "cashmere",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akv00/react_project/issues"
+  },
+  "homepage": "https://github.com/Akv00/react_project#readme",
+  "devDependencies": {
+    "parcel": "^2.10.3"
+  }
+}
