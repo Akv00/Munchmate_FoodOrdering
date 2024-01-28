@@ -4,6 +4,7 @@ import cards from "../utils/mockData";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer.js";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus.js";
 
 const Body = () => {
   let [listOfRestraunt, setListOfRestraunt] = useState([]);
@@ -28,6 +29,11 @@ const Body = () => {
     );
   };
 
+  if(useOnlineStatus() === false){
+    return (
+      <div><h1>please check your internet</h1></div>
+    )
+  }
   //Conditional rendering
   if (listOfRestraunt.length === 0) {
     return <Shimmer />;
@@ -35,16 +41,17 @@ const Body = () => {
 
   return (
     <div className="body">
-      <div className="filter">
-        <div className="search">
+      <div className="filter flex">
+        <div className="search m-4 p-41">
           <input
-            className="search-box"
+            className="border border-solid border-black"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           />
           <button
+            className="px-4 py-2 bg-green-100 m-4 rounded-lg"
             onClick={() => {
               // console.log({searchText});
               const filteredRestraunt = listOfRestraunt.filter((res) =>
@@ -58,8 +65,9 @@ const Body = () => {
             Search
           </button>
         </div>
+        <div className="search m-4 p-41 flex items-center">
         <button
-          className="filter-btn"
+          className="px-4 py-2 bg-gray-100"
           onClick={() => {
             const filteredList = listOfRestraunt.filter((card) => {
               if (card.card.card.info.avgRating > 4) return card;
@@ -70,8 +78,10 @@ const Body = () => {
         >
           Filter Restaurants
         </button>
+        </div>
+        
       </div>
-      <div className="res-container">
+      <div className="flex flex-wrap">
         {filteredRestraunt.map((restaurant) => {
           return (
             <Link key={restaurant.card.card.info.id} to={"/restaurants/"+restaurant.card.card.info.id}><RestaurantCard
