@@ -7,16 +7,27 @@ import About from "./components/About.js";
 import Error from "./components/Error.js";
 import Contact from "./components/Contact.js";
 import RestaurantMenu from "./components/RestaurantMenu.js";
-
+import UserContext from "./utils/UserContext.js";
 
 const Grocery = lazy(()=>import("./components/Grocery.js"));
 
 const AppLayout = () => {
+  const [userName, setUserName] = useState();
+
+  useEffect(()=>{
+    const data = {
+      name: "Abhishek"
+    }
+    setUserName(data.name);
+  },[])
   return (
-    <div className="app">
+    <UserContext.Provider value = {{loggedInUser: userName}}>
+      <div className="app">
       <Header></Header>
       <Outlet />
     </div>
+    </UserContext.Provider>
+    
   );
 };
 
