@@ -13,14 +13,14 @@ const Body = () => {
   let [searchText, setSearchText] = useState([]);
 
   const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
-  
+
   useEffect(() => {
     fetchData();
   }, []);
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/search/v3?lat=26.8466937&lng=80.94616599999999&str=Fast%20Food&trackingId=6816e21b-5316-f2d4-bd7e-a34dd7f1cde0&submitAction=ENTER&queryUniqueId=9ff0d9b4-247f-76a1-480f-925c6ce417af"
+      "https://www.swiggy.com/dapi/restaurants/search/v3?lat=26.87560&lng=80.91150&str=fast%20food&trackingId=f72975df-cde9-340e-9364-ee02e6689e40&submitAction=ENTER&queryUniqueId=de8a84b7-7f5e-67d1-9973-e9f1170c57f4"
     );
     const json = await data.json();
 
