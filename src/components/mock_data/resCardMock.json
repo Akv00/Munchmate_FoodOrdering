@@ -1,0 +1,65 @@
+{
+    "id": "110503",
+    "name": "Alibaba",
+    "city": "15",
+    "slugs": {
+        "restaurant": "alibaba-mahanagar-mahanagar",
+        "city": "lucknow"
+    },
+    "cloudinaryImageId": "xwty77lyc0qn2pftipro",
+    "address": "9/8A, VIKAS NAGAR, LUCKNOW, , LOHIYA NAGAR, Nagar Nigam Food Safety Zone-9, Lucknow, Uttar Pradesh - 226022",
+    "locality": "Vikas Nagar\n",
+    "areaName": "Khurram Nagar",
+    "costForTwo": "20000",
+    "costForTwoMessage": "₹200 FOR TWO",
+    "cuisines": [
+        "Chinese",
+        "Fast Food",
+        "Burgers",
+        "Indian",
+        "Snacks",
+        "Italian",
+        "Pastas"
+    ],
+    "avgRating": 4.2,
+    "feeDetails": {},
+    "avgRatingString": "4.2",
+    "totalRatingsString": "1K+",
+    "sla": {
+        "deliveryTime": 43,
+        "minDeliveryTime": 40,
+        "maxDeliveryTime": 45,
+        "lastMileTravel": 7.5,
+        "serviceability": "SERVICEABLE",
+        "rainMode": "RAIN_MODE_NONE",
+        "slaString": "40-45 MINS",
+        "lastMileTravelString": "7.5 km",
+        "iconType": "ICON_TYPE_EMPTY"
+    },
+    "availability": {
+        "opened": true,
+        "restaurantClosedMeta": {}
+    },
+    "badges": {},
+    "aggregatedDiscountInfoV3": {
+        "header": "60% OFF",
+        "subHeader": "UPTO ₹120"
+    },
+    "ratingSlab": "RATING_SLAB_5",
+    "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+    },
+    "cartOrderabilityNudgeBanner": {
+        "parameters": {},
+        "presentation": {}
+    },
+    "externalRatings": {
+        "aggregatedRating": {
+            "rating": "--"
+        }
+    },
+    "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+}

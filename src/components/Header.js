@@ -1,4 +1,4 @@
-import image from "../utils/images/munchmate-high-resolution-logo-transparent.png";
+import image from "../utils/images/logo.jpeg";
 import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <div className="flex justify-between bg-pink-100 shadow-lg">
       <div className="logo-container">
-        <img className="w-56" src={image} />
+        <img className="w-56" src={image} alt="some"/>
       </div>
       <div className="flex items-center">
         <ul className="flex p-4 m-4">
